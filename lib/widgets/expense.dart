@@ -1,3 +1,8 @@
+import 'dart:ffi';
+
+import 'package:expense_tracker/chart/chart.dart';
+import 'package:expense_tracker/core/utils/app_theme.dart';
+import 'package:expense_tracker/core/utils/text_style.dart';
 import 'package:expense_tracker/models/expense.dart';
 import 'package:flutter/material.dart';
 
@@ -79,8 +84,9 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Expenses Tracker',
+          style: ts18Black400.copyWith(color: cColorScheme.primaryContainer),
         ),
         actions: [
           IconButton(
@@ -91,7 +97,7 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
       ),
       body: Column(
         children: [
-          const Text('The chart'),
+          Chart(expenses: registeredExpenses,),
           Expanded(
             child: mainContain,
           ),

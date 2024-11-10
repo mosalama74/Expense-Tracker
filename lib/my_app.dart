@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget{
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme:appTheme,
+        darkTheme:darkTheme,
+        themeMode:ThemeMode.system,
         home:  const ExpenseScreen(),
       ),
     );
