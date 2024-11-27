@@ -8,6 +8,7 @@ var cDarkColorScheme = ColorScheme.fromSeed(
   seedColor: const Color.fromARGB(255, 5, 99, 125),
 );
 
+/*Light Theme */
 ThemeData appTheme = ThemeData().copyWith(
   colorScheme: cColorScheme,
   appBarTheme: const AppBarTheme().copyWith(
@@ -24,9 +25,10 @@ ThemeData appTheme = ThemeData().copyWith(
     ),
   ),
 );
-
+/*Dark Theme */
 ThemeData darkTheme = ThemeData.dark().copyWith(
   colorScheme: cDarkColorScheme,
+  
    cardTheme: const CardTheme().copyWith(
     color: cDarkColorScheme.secondaryContainer,
     margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
